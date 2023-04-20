@@ -1,0 +1,13 @@
+.user-main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px - 16px - 16px);
+  width: 100%;
+  position: relative;
+}
+
+.add-user-btn {
+  position: absolute;
+  right: 48px;
+  bottom: 48px;
+}
