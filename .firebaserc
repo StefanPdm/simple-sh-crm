@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simple-sh-crm": {
+      "hosting": {
+        "simple-sh-crm": [
+          "simple-sh-crm"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simple-sh-crm"
+  }
+}

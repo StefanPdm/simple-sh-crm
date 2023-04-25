@@ -1,0 +1,35 @@
+.user-detail-header {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 200px;
+  background-color: var(--orange);
+  color: var(--white);
+  position: relative;
+  padding-left: calc(100px + 16px + 16px);
+  padding-bottom: 16px;
+
+  h2 {
+    margin-bottom: 0px;
+  }
+
+  .user-detail-header-img {
+    position: absolute;
+    width: 100px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+      inset 5px 5px 5px rgba(0, 0, 0, 0.3);
+    bottom: 16px;
+    left: 16px;
+    object-fit: cover;
+    object-position: 0px 6px;
+  }
+
+  .user-detail-header-infos {
+    padding-bottom: 25px;
+  }
+}
+.message-deleted {
+  color: var(--orange);
+  padding-right: 16px;
+}

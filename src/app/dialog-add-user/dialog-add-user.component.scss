@@ -9,30 +9,13 @@
   // gap: 16px;
 }
 
-.width-1-1 {
-  width: 100%;
+.progress-bar {
+  position: absolute !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  width: calc(100% + 0px) !important;
 }
 
-.width-1-2 {
-  width: 49%;
-}
-
-.width-1-3 {
-  width: 33.33%;
-}
-
-.width-1-4 {
-  width: 25%;
-}
-
-.width-1-5 {
-  width: 20%;
-}
-
-.width-2-3 {
-  width: 66.66%;
-}
-
-.p-r-16 {
-  padding-right: 16px;
+.position-relative {
+  position: relative !important;
 }
