@@ -12,7 +12,7 @@ import { UserComponent } from '../user/user.component';
 export class DialogAddUserComponent {
   user: User = new User();
   dialog: any;
-  birthDate: Date = new Date(1970, 1, 1);
+  birthDate: Date = new Date(2000, 1, 1);
   showProgressBar = false;
 
   constructor(

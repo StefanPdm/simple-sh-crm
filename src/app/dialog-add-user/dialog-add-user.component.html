@@ -20,12 +20,10 @@
         <mat-form-field class="width-1-1">
           <mat-label>Email</mat-label>
           <!-- [(...)] eckige Klammer = Input, runde Klammer Output  -> hier also beides-->
-          <input [disabled]="showProgressBar" [(ngModel)]="user.email" matInput placeholder=""
-            value="" name="email">
+          <input [disabled]="showProgressBar" [(ngModel)]="user.email" matInput
+            placeholder="Your email" value="" name="email" required>
         </mat-form-field>
-
       </div>
-
       <div class="add-user-row">
         <mat-form-field appearance="fill" class="width-1-2 p-r-16">
           <mat-label>Birth date</mat-label>
@@ -58,14 +56,12 @@
           <input [disabled]="showProgressBar" [(ngModel)]="user.city" matInput name="city">
         </mat-form-field>
       </div>
-
       <div mat-dialog-actions>
         <button [disabled]="showProgressBar" mat-button (click)="dialogRef.close()">No
           Thanks</button>
         <button [disabled]="showProgressBar" mat-button (click)="saveUser()"
           cdkFocusInitial>Save</button>
       </div>
-
     </form>
     <div class="progress-bar">
       <mat-progress-bar *ngIf="showProgressBar" mode="indeterminate"

@@ -26,6 +26,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AngularFireModule.initializeApp(environment.firebase),
     MatProgressBarModule,
     MatCardModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

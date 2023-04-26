@@ -20,6 +20,7 @@ export class UserDetailComponent implements OnInit {
   editActive: Boolean = false;
   showProgressBar: Boolean = false;
   showMessage: Boolean = false;
+  birthDate: Date = new Date(1970, 1, 1);
 
   async ngOnInit() {
     this.route.paramMap.subscribe((paramMap) => {
@@ -38,6 +39,8 @@ export class UserDetailComponent implements OnInit {
       .subscribe((user: any) => {
         this.activeUser = new User(user);
         console.log('User:', this.activeUser);
+        this.birthDate = new Date(user.birthdate);
+        console.log(this.birthDate);
       });
   }
 
@@ -49,6 +52,7 @@ export class UserDetailComponent implements OnInit {
 
   deleteUser() {
     this.showProgressBar = true;
+    // this.firestore.collection('users').doc(this.userId).valueChanges().unsubscribe();
     this.firestore.collection('users').doc(this.userId).delete();
     setTimeout(() => {
       this.showProgressBar = false;
@@ -61,6 +65,7 @@ export class UserDetailComponent implements OnInit {
   }
   async updateUser() {
     console.log(this.activeUser);
+    this.activeUser.birthdate = this.birthDate?.getTime();
     await this.firestore
       .collection('users')
       .doc(this.userId)
